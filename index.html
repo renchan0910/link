@@ -64,8 +64,8 @@ body{
 }
 
 .sub-logo img{
-    width:280px;
-    max-width:90%;
+    width:220px;
+    max-width:80%;
     height:auto;
 }
 
@@ -110,6 +110,19 @@ body{
     margin-top:50px;
     font-size:12px;
     color:#94a3b8;
+}
+
+.slide-in{
+    opacity:0;
+    transform:translateX(-60px);
+    animation:slideInLogo 0.8s ease 2.2s forwards;
+}
+
+@keyframes slideInLogo{
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
 }
 
 #welcome-screen{
@@ -165,7 +178,7 @@ body{
 
 <div class="container">
 
-    <div class="logo">
+    <div class="logo slide-in">
         <img src="logo.png" alt="1stCREW Logo">
     </div>
 
