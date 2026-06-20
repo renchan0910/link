@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>1stCREW</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,#f7f9fc,#eef3f8);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#1f2937;
+}
+
+.container{
+    width:90%;
+    max-width:450px;
+    text-align:center;
+
+    opacity:0;
+    animation:mainFade 1.5s ease 2s forwards;
+}
+
+@keyframes mainFade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.logo{
+    font-size:48px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.logo img{
+    width:220px;
+    max-width:80%;
+    height:auto;
+}
+
+.sub-logo{
+    margin-top:15px;
+    margin-bottom:35px;
+}
+
+.sub-logo img{
+    width:280px;
+    max-width:90%;
+    height:auto;
+}
+
+
+.logo span{
+    color:#2563eb;
+}
+
+.catch{
+    margin-top:12px;
+    color:#64748b;
+    letter-spacing:1px;
+    font-size:14px;
+}
+
+.links{
+    margin-top:50px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.btn{
+    display:block;
+    text-decoration:none;
+    color:#0f172a;
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    font-weight:600;
+    font-size:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 40px rgba(37,99,235,.15);
+}
+
+.footer{
+    margin-top:50px;
+    font-size:12px;
+    color:#94a3b8;
+}
+
+#welcome-screen{
+    position:fixed;
+    inset:0;
+    background:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+
+    opacity:1;
+    animation:splashFade 1.5s ease 2s forwards;
+}
+
+#welcome-screen h1{
+    font-size:32px;
+    font-weight:700;
+    color:#0f172a;
+    opacity:0;
+    animation:textFadeIn .8s ease forwards;
+}
+
+@keyframes textFadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes splashFade{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="welcome-screen">
+    <h1>Welcome to 1stCREW</h1>
+</div>
+
+<div class="container">
+
+    <div class="logo">
+        <img src="logo.png" alt="1stCREW Logo">
+    </div>
+
+    <div class="sub-logo">
+        <img src="イベント事業部ロゴ.png" alt="イベント事業部">
+    </div>
+
+    <div class="links">
+
+        <a href="https://1stcrew.co.jp/" class="btn" >
+            Official Website
+        </a>
+
+        <a href="https://www.instagram.com/1st.crew_?igsh=MTFhN28ybDZrZ3RzZQ==" class="btn" >
+            Instagram
+        </a>
+
+    </div>
+
+    <div class="footer">
+        © 1stCREW
+    </div>
+
+</div>
+
+<script>
+setTimeout(() => {
+    document.getElementById('welcome-screen').remove();
+}, 3000);
+</script>
+
+</body>
+
+</html>
